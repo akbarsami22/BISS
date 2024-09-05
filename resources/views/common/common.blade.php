@@ -97,7 +97,7 @@
                     @if (in_array(Route::currentRouteName(), $routesWithSearch))
                         <form class="d-flex align-items-center me-3">
                             <input type="text" value="{{ Request::get('keyword') }}" name="keyword"
-                                class="form-control me-2" placeholder="Search" style="max-width: 200px;">
+                                class="form-control me-2" placeholder="Search here" style="max-width: 200px;">
                             <button class="btn btn-success" type="submit">Search</button>
                             <a class="btn btn-primary ms-2" href="{{ route('books') }}">Reset Search</a>
                         </form>

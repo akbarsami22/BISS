@@ -16,6 +16,7 @@ class BookController extends Controller
             $books->where(function ($query) use ($request) {
                 $query->where('title', 'like', '%' . $request->keyword . '%')
                       ->orWhere('author', 'like', '%' . $request->keyword . '%')
+                      ->orWhere('Year_published', 'like', '%' . $request->keyword . '%')
                       ->orWhere('publisher', 'like', '%' . $request->keyword . '%');
             });
         }
